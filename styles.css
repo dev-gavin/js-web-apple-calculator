@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: rgb(18, 18, 18);
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    font-family: inherit;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    border: none;
+    font-size: 3rem;
+    width: 8rem;
+}
+
+.calculator {
+    width: 50%;
+    margin: 5rem auto;
+    max-width: min-content;
+}
+
+.screen {
+    color: white;
+    font-size: 7.5rem;
+    text-align: right;
+    padding-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.button-group {
+    display: grid;
+    grid-template-areas:
+        'clear negative percent divide'
+        'seven eight nine multiply'
+        'four five six minus'
+        'one two three plus'
+        'zero zero decimal equals';
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    justify-items: center;
+}
+
+.numpad {
+    background-color: hsl(0, 0%, 26%);
+    color: white;
+
+    &:active,
+    &:focus {
+        background-color: hsl(0, 0%, 56%);
+    }
+}
+
+.utility {
+    background-color: rgb(157, 157, 157);
+
+    &:active,
+    &:focus {
+        background-color: hsl(0, 0%, 82%);
+    }
+}
+
+.operator {
+    background-color: orange;
+    color: white;
+    font-size: 3rem;
+}
+
+.zero {
+    grid-area: zero;
+    width: 100%;
+    aspect-ratio: unset;
+    border-radius: 100px;
+    text-align: left;
+    padding-left: 3.15rem;
+}
+
+/* prettier-ignore */
+.one { grid-area: one; }
+
+/* prettier-ignore */
+.two { grid-area: two; }
+
+/* prettier-ignore */
+.three { grid-area: three; }
+
+/* prettier-ignore */
+.four { grid-area: four; }
+
+/* prettier-ignore */
+.five { grid-area: five; }
+
+/* prettier-ignore */
+.six { grid-area: six; }
+
+/* prettier-ignore */
+.seven { grid-area: seven; }
+
+/* prettier-ignore */
+.eight { grid-area: eight; }
+
+/* prettier-ignore */
+.nine { grid-area: nine; }
+
+/* prettier-ignore */
+.clear { grid-area: clear; }
+
+/* prettier-ignore */
+.negative { grid-area: negative; }
+
+/* prettier-ignore */
+.percent { grid-area: percent; }
+
+/* prettier-ignore */
+.divide { grid-area: divide; }
+
+/* prettier-ignore */
+.multiply { grid-area: multiply; }
+
+/* prettier-ignore */
+.minus { grid-area: minus; }
+
+/* prettier-ignore */
+.plus { grid-area: plus; }
+
+/* prettier-ignore */
+.equals { grid-area: equals; }
+
+/* prettier-ignore */
+.decimal { grid-area: decimal; }
